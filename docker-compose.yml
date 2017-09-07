@@ -1,0 +1,13 @@
+version: '2'
+services:
+     wordpress:
+        image: a2ncer/wordpress
+        environment:
+          - "SSL_ENABLE=true"
+        volumes:
+          - ./private.key:/etc/ssl/private/private.key
+          - ./cert.pem:/etc/ssl/certs/cert.pem
+        ports:
+          - "80:80"
+          - "443:443"
+
