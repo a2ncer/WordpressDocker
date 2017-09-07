@@ -3,7 +3,7 @@ services:
      wordpress:
         image: a2ncer/wordpress
         environment:
-          - "SSL_ENABLE=true"
+          SSL_ENABLE: "true"
         volumes:
           - ./private.key:/etc/ssl/private/private.key
           - ./cert.pem:/etc/ssl/certs/cert.pem

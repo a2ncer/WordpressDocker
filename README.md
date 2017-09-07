@@ -102,7 +102,7 @@ services:
        WORDPRESS_DB_HOST: ${MYSQL_HOST}
        WORDPRESS_DB_USER: ${MYSQL_USER}
        WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
-       SSL_ENABLE: true
+       SSL_ENABLE: "true"
 volumes:
     db_data:
     
