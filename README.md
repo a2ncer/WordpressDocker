@@ -93,6 +93,7 @@ services:
      image: a2ncer/wordpress:latest
      ports:
        - "80:80"
+       - "443:443"
      restart: always
      volumes:
        - ./wordpress:/var/www/html
