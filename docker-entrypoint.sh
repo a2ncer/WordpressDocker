@@ -225,12 +225,12 @@ fi
 
 # Configure SSL as needed
 if [ -z "${SSL_ENABLE:-}" ]; then
-	echo "no ssl"
+    echo "No SSL"
 else
-	echo "ssl install... ${SSL_ENABLE}"
+    echo "SSL install... ${SSL_ENABLE}"
     cp -rf /tmp/000-default.conf /etc/apache2/sites-available/000-default.conf &&
     cp -rf /tmp/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf &&
-    ln -s /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/default-ssl.conf
+    ln -sf /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-enabled/default-ssl.conf
 fi
 
 
