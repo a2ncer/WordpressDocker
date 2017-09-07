@@ -63,7 +63,7 @@ docker run --name wordpress \
            -p 80:80 \
            -p 443:443 \
            -v $(pwd)/private.key:/etc/ssl/private/private.key \
-           -v $(pwd)/cert.pem://etc/ssl/certs/cert.pem \
+           -v $(pwd)/cert.pem:/etc/ssl/certs/cert.pem \
            -d
            a2ncer/wordpress
 
