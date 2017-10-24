@@ -44,6 +44,7 @@ services:
        - ./wordpress:/var/www/html
      environment:
        WORDPRESS_DB_HOST: ${MYSQL_HOST}
+       WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
        WORDPRESS_DB_USER: ${MYSQL_USER}
        WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
 volumes:
@@ -101,6 +102,7 @@ services:
        - ./cert.pem:/etc/ssl/certs/cert.pem
      environment:
        WORDPRESS_DB_HOST: ${MYSQL_HOST}
+       WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
        WORDPRESS_DB_USER: ${MYSQL_USER}
        WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
        SSL_ENABLE: "true"
