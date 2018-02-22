@@ -1,4 +1,4 @@
-FROM wordpress:latest
+FROM wordpress:php5.6
 
 RUN docker-php-ext-install zip
 RUN a2enmod ssl && a2enmod alias
