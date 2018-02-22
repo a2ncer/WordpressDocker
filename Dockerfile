@@ -1,6 +1,6 @@
 FROM wordpress:php5.6
 
-RUN docker-php-ext-install zip
+RUN apt install -y zlib1g zlib1g-dbg zlib1g-dev zlibc && docker-php-ext-install zip
 RUN a2enmod ssl && a2enmod alias
 
 COPY default-ssl.conf /tmp
